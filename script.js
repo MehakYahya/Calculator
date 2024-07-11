@@ -14,9 +14,8 @@ Array.from(buttons).forEach((button) => {
       memory += parseFloat(string);
       string = "";
       document.querySelector('input').value = string;
-    } else if (e.target.innerHTML == 'M-') {
-      memory -= parseFloat(string);
-      string = "";
+    } else if (e.target.innerHTML == '←') {
+      string = string.slice(0, -1);
       document.querySelector('input').value = string;
     } else if (e.target.innerHTML == 'MC') {
       memory = 0;
